@@ -1,4 +1,3 @@
-import React from "react";
 import { MainContainer } from "./styles.module";
 import { IoSearchOutline } from "react-icons/io5";
 import { WiHumidity } from "react-icons/wi";
@@ -25,16 +24,16 @@ const Weather = () => {
         </div>
         <div className="infoArea">
           <div className="humidity">
-            <WiHumidity className="Icon" />
-            <div className="Info">
+            <WiHumidity className="icon" />
+            <div className="info">
               <h1>60%</h1>
               <p>Humidity</p>
             </div>
           </div>
 
           <div className="wind">
-            <WiStrongWind className="Icon" />
-            <div className="Info">
+            <WiStrongWind className="icon" />
+            <div className="info">
               <h1>2.35km/hr</h1>
               <p>wind speed</p>
             </div>

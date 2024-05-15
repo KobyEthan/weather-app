@@ -1,8 +1,21 @@
+import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  #root {
+    height: 100%;
+  }
+`;
 
 export const MainContainer = styled.div`
   height: 100vh;
   background: linear-gradient(to right, #c7c7eb, #ccf2dd);
+  margin: 0px;
   .container {
     background-color: #ffffff7d;
     border-radius: 12px;
@@ -41,8 +54,8 @@ export const MainContainer = styled.div`
   }
   .searchCircle {
     border: 1px solid grey;
-    width: 30px; /* Adjust the width of the circle as needed */
-    height: 30px; /* Ensure the height matches the width for a perfect circle */
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -83,10 +96,10 @@ export const MainContainer = styled.div`
     }
   }
 
-  .InfoArea {
+  .infoArea {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: "Josefin Sans", sans-serif;
     margin: 10px;
     background: linear-gradient(
@@ -103,12 +116,12 @@ export const MainContainer = styled.div`
     align-items: center;
     margin: 0 20px;
 
-    > .humidIcon {
+    > .icon {
       font-size: 3rem;
     }
   }
 
-  .windIcon {
+  .icon {
     font-size: 2rem;
     margin-right: 10px;
   }
@@ -120,7 +133,7 @@ export const MainContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 100;
 
     .loadingIcon {
       font-size: 3rem;

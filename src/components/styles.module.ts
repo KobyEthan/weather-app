@@ -19,7 +19,7 @@ export const MainContainer = styled.div`
   .container {
     background-color: #ffffff7d;
     border-radius: 12px;
-    padding: 1rem;
+    padding: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,7 +52,7 @@ export const MainContainer = styled.div`
     width: 80%;
     background: transparent;
   }
-  .searchCircle {
+  .search {
     border: 1px solid grey;
     width: 30px;
     height: 30px;
@@ -72,7 +72,6 @@ export const MainContainer = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 30px 0;
 
     > .icon {
       font-size: 9rem;
@@ -80,12 +79,16 @@ export const MainContainer = styled.div`
 
     > h1 {
       font-size: 3rem;
-
       font-family: "Bebas Neue", sans-serif;
     }
 
+    > .temp {
+      margin: -20px 0px;
+    }
+
     > span {
-      margin-bottom: 10px;
+      font-size: 1.5rem;
+      margin-top: -15px;
       font-family: "Inter", sans-serif;
     }
 
@@ -94,6 +97,11 @@ export const MainContainer = styled.div`
       font-family: "Inter", sans-serif;
       font-weight: 400;
     }
+  }
+
+  .icon {
+    font-size: 8rem;
+    margin-top: 10px;
   }
 
   .infoArea {
@@ -115,15 +123,20 @@ export const MainContainer = styled.div`
     display: flex;
     align-items: center;
     margin: 0 20px;
-
-    > .icon {
-      font-size: 3rem;
-    }
   }
 
-  .icon {
-    font-size: 2rem;
-    margin-right: 10px;
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info > p {
+    margin-top: -10px;
+  }
+  .infoIcon {
+    font-size: 3rem;
+    margin-bottom: -15px;
   }
 
   .loading {
@@ -145,6 +158,7 @@ export const MainContainer = styled.div`
       font-family: "Josefin Sans", sans-serif;
     }
   }
+  /* animation for loading icon */
   @keyframes spin {
     from {
       transform: rotate(0deg);

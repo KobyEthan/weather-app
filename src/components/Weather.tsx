@@ -17,6 +17,7 @@ interface WeatherDataTypes {
   name: string;
   main: {
     temp: number;
+    feels_like: number;
     humidity: number;
   };
   sys: {
@@ -67,6 +68,7 @@ const Weather = () => {
     try {
       const { searchResults } = await fetchWeatherData(searchCity);
       setWeatherData(searchResults);
+      console.log(searchResults);
     } catch (error) {
       console.error("No results found");
     }
@@ -140,8 +142,11 @@ const Weather = () => {
               <h1>{weatherData.name}</h1>
               <span>{weatherData.sys.country}</span>
               <div className="icon">{getIcon(weatherData.weather[0].main)}</div>
-              <h1 className="temp">{weatherData.main.temp}°C</h1>
               <h2>{weatherData.weather[0].main}</h2>
+              <h1 className="temp">{weatherData.main.temp}°C</h1>
+              <p className="feel">
+                Feels Like: {weatherData.main.feels_like}°C
+              </p>
             </div>
             <div className="infoArea">
               <div className="humidity">

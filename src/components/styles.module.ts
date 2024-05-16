@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const MainContainer = styled.div`
   height: 100vh;
-  background: linear-gradient(to right, #c7c7eb, #ccf2dd);
+  background: linear-gradient(to right, #7ab2b2, #5ab2ff);
   margin: 0px;
   .container {
     background-color: #ffffff7d;
@@ -26,7 +26,6 @@ export const MainContainer = styled.div`
     transform: translate(-50%, -50%);
     box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
     box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.8);
     background-blend-mode: overlay;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +82,11 @@ export const MainContainer = styled.div`
     }
 
     > .temp {
-      margin: -20px 0px;
+      margin-top: -10px;
+    }
+    > .feel {
+      margin-top: -10px;
+      font-family: "Bebas Neue", sans-serif;
     }
 
     > span {
@@ -101,7 +104,8 @@ export const MainContainer = styled.div`
 
   .icon {
     font-size: 8rem;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: -20px;
   }
 
   .infoArea {
@@ -110,11 +114,7 @@ export const MainContainer = styled.div`
     justify-content: space-between;
     font-family: "Josefin Sans", sans-serif;
     margin: 10px;
-    background: linear-gradient(
-      90deg,
-      rgba(243, 255, 253, 1) 0%,
-      rgba(253, 255, 232, 1) 100%
-    );
+    background: linear-gradient(to right, #7ab2b2, #5ab2ff);
     border-radius: 12px;
     padding: 10px;
   }
